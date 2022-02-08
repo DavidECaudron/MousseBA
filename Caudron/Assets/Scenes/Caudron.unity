@@ -306,6 +306,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2568355259464263024, guid: 09c1738e1956cdb4fab3cd08fb00af48, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2568355259464263025, guid: 09c1738e1956cdb4fab3cd08fb00af48, type: 3}
       propertyPath: m_Name
       value: NavMesh
@@ -411,6 +415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mob
       objectReference: {fileID: 0}
+    - target: {fileID: 3643356095154914697, guid: 88261418c8fb8fb42a284ef687ee79ef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3643356095154914699, guid: 88261418c8fb8fb42a284ef687ee79ef, type: 3}
       propertyPath: _camera
       value: 
@@ -472,6 +480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 4084781034197018315, guid: f47f2e32e7c8f6841ac91952a24efb92, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47f2e32e7c8f6841ac91952a24efb92, type: 3}
 --- !u!1001 &5719226932579248217
@@ -528,6 +540,10 @@ PrefabInstance:
     - target: {fileID: 5719226932545775925, guid: e3cdbd6aeda8c4e498acb966ad693161, type: 3}
       propertyPath: m_Name
       value: Level Test
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719226932545775925, guid: e3cdbd6aeda8c4e498acb966ad693161, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3cdbd6aeda8c4e498acb966ad693161, type: 3}
