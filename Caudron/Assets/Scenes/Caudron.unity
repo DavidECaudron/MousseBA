@@ -935,6 +935,7 @@ GameObject:
   - component: {fileID: 147930221}
   - component: {fileID: 147930223}
   - component: {fileID: 147930222}
+  - component: {fileID: 147930224}
   m_Layer: 0
   m_Name: Mob (1)
   m_TagString: Untagged
@@ -950,7 +951,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147930220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 459181865}
@@ -976,8 +977,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
+  m_Height: 0.9
+  m_BaseOffset: 0.4
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &147930223
@@ -994,6 +995,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 963194227}
   _agent: {fileID: 147930222}
+--- !u!54 &147930224
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147930220}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &152619358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,6 +1133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 156602535}
   - component: {fileID: 156602536}
+  - component: {fileID: 156602537}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -1150,6 +1168,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &156602537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156602534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &168192247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 241005254}
   - component: {fileID: 241005255}
+  - component: {fileID: 241005256}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -1376,6 +1407,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &241005256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241005253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &243873209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,6 +1429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 243873210}
   - component: {fileID: 243873211}
+  - component: {fileID: 243873212}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -1420,6 +1464,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &243873212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243873209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &253604385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,6 +1584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 272324686}
   - component: {fileID: 272324687}
+  - component: {fileID: 272324688}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -1562,6 +1619,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &272324688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272324685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &276656436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,6 +1753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300598634}
   - component: {fileID: 300598635}
+  - component: {fileID: 300598636}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -1718,6 +1788,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &300598636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300598633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &328635333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1860,6 +1942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336984213}
   - component: {fileID: 336984214}
+  - component: {fileID: 336984215}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -1894,6 +1977,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &336984215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336984212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &337281856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,6 +2345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 432303517}
   - component: {fileID: 432303518}
+  - component: {fileID: 432303519}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -2284,6 +2380,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &432303519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432303516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &457816228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,6 +2616,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462644482}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &464747040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 464747041}
+  - component: {fileID: 464747043}
+  - component: {fileID: 464747042}
+  m_Layer: 0
+  m_Name: Sphere Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &464747041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464747040}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalScale: {x: 1, y: 15, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1153978223}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &464747042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464747040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &464747043
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464747040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &468812493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,6 +2783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 480962022}
   - component: {fileID: 480962023}
+  - component: {fileID: 480962024}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -2652,6 +2818,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &480962024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480962021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &526925800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,50 +2873,6 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &548415999
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 548416000}
-  - component: {fileID: 548416001}
-  m_Layer: 0
-  m_Name: Sphere Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &548416000
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548415999}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
-  m_LocalScale: {x: 1, y: 15, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1153978223}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &548416001
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548415999}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &556347070
 GameObject:
@@ -3944,6 +4078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 852147475}
   - component: {fileID: 852147476}
+  - component: {fileID: 852147477}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -3978,6 +4113,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &852147477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852147474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &858425405
 GameObject:
   m_ObjectHideFlags: 0
@@ -4516,6 +4663,7 @@ GameObject:
   - component: {fileID: 912430656}
   - component: {fileID: 912430658}
   - component: {fileID: 912430657}
+  - component: {fileID: 912430659}
   m_Layer: 0
   m_Name: Mob (2)
   m_TagString: Untagged
@@ -4531,7 +4679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912430655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1211385833}
@@ -4557,8 +4705,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
+  m_Height: 0.9
+  m_BaseOffset: 0.4
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &912430658
@@ -4575,6 +4723,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 963194227}
   _agent: {fileID: 912430657}
+--- !u!54 &912430659
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912430655}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &915116044
 GameObject:
   m_ObjectHideFlags: 0
@@ -5823,6 +5987,7 @@ GameObject:
   - component: {fileID: 1136700229}
   - component: {fileID: 1136700231}
   - component: {fileID: 1136700230}
+  - component: {fileID: 1136700232}
   m_Layer: 0
   m_Name: Mob
   m_TagString: Untagged
@@ -5838,7 +6003,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136700228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 4.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1054245995}
@@ -5864,8 +6029,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
+  m_Height: 0.9
+  m_BaseOffset: 0.4
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1136700231
@@ -5882,6 +6047,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 963194227}
   _agent: {fileID: 1136700230}
+--- !u!54 &1136700232
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136700228}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1153978222
 GameObject:
   m_ObjectHideFlags: 0
@@ -5910,7 +6091,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 334216694}
-  - {fileID: 548416000}
+  - {fileID: 464747041}
   m_Father: {fileID: 2036514405}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6543,6 +6724,7 @@ GameObject:
   - component: {fileID: 1217881488}
   - component: {fileID: 1217881490}
   - component: {fileID: 1217881489}
+  - component: {fileID: 1217881491}
   m_Layer: 0
   m_Name: Mob (3)
   m_TagString: Untagged
@@ -6558,7 +6740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217881487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 413402193}
@@ -6584,8 +6766,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
+  m_Height: 0.9
+  m_BaseOffset: 0.4
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1217881490
@@ -6602,6 +6784,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 963194227}
   _agent: {fileID: 1217881489}
+--- !u!54 &1217881491
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217881487}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1224103027
 GameObject:
   m_ObjectHideFlags: 0
@@ -6997,6 +7195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1298671282}
   - component: {fileID: 1298671283}
+  - component: {fileID: 1298671284}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -7031,6 +7230,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1298671284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298671281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1304184934
 GameObject:
   m_ObjectHideFlags: 0
@@ -7042,6 +7253,7 @@ GameObject:
   - component: {fileID: 1304184935}
   - component: {fileID: 1304184937}
   - component: {fileID: 1304184936}
+  - component: {fileID: 1304184938}
   m_Layer: 0
   m_Name: Mob (4)
   m_TagString: Untagged
@@ -7057,7 +7269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304184934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 457816229}
@@ -7083,8 +7295,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
+  m_Height: 0.9
+  m_BaseOffset: 0.4
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1304184937
@@ -7101,6 +7313,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 963194227}
   _agent: {fileID: 1304184936}
+--- !u!54 &1304184938
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304184934}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1307884620
 GameObject:
   m_ObjectHideFlags: 0
@@ -7229,6 +7457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1312591882}
   - component: {fileID: 1312591883}
+  - component: {fileID: 1312591884}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -7263,6 +7492,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1312591884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312591881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1326144548
 GameObject:
   m_ObjectHideFlags: 0
@@ -7380,6 +7621,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1335898716}
   - component: {fileID: 1335898717}
+  - component: {fileID: 1335898718}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -7414,6 +7656,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1335898718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335898715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1373921110
 GameObject:
   m_ObjectHideFlags: 0
@@ -7581,6 +7835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1389493821}
   - component: {fileID: 1389493822}
+  - component: {fileID: 1389493823}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -7615,6 +7870,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1389493823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389493820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1394001576
 GameObject:
   m_ObjectHideFlags: 0
@@ -7718,6 +7985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1409182040}
   - component: {fileID: 1409182041}
+  - component: {fileID: 1409182042}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -7752,6 +8020,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1409182042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409182039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1431276298
 GameObject:
   m_ObjectHideFlags: 0
@@ -8213,6 +8493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1536128099}
   - component: {fileID: 1536128100}
+  - component: {fileID: 1536128101}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -8247,6 +8528,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1536128101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536128098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1537060629
 GameObject:
   m_ObjectHideFlags: 0
@@ -9173,6 +9466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1822863153}
   - component: {fileID: 1822863154}
+  - component: {fileID: 1822863155}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -9207,6 +9501,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1822863155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822863152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1829651178
 GameObject:
   m_ObjectHideFlags: 0
@@ -9611,6 +9917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1934500273}
   - component: {fileID: 1934500274}
+  - component: {fileID: 1934500275}
   m_Layer: 0
   m_Name: Sphere Collider
   m_TagString: Untagged
@@ -9645,6 +9952,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1934500275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934500272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1943207876
 GameObject:
   m_ObjectHideFlags: 0
@@ -10145,6 +10464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2036514405}
+  - component: {fileID: 2036514406}
   m_Layer: 0
   m_Name: Tower (2)
   m_TagString: Untagged
@@ -10168,6 +10488,18 @@ Transform:
   m_Father: {fileID: 253604386}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!114 &2036514406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036514404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0279bc9d329b05644888c9c7132e4291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2063518207
 GameObject:
   m_ObjectHideFlags: 0

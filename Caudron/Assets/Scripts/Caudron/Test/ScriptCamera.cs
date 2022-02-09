@@ -14,7 +14,10 @@ namespace CaudronTest
 
         private void Movement()
         {
-            this.gameObject.transform.position = (new Vector3(_target.transform.position.x, this.gameObject.transform.position.y, _target.transform.position.z));
+            if (_target != null)
+            {
+                this.gameObject.transform.position = (new Vector3(_target.transform.position.x, this.gameObject.transform.position.y, _target.transform.position.z));
+            }
         }
         private void Zoom()
         {
