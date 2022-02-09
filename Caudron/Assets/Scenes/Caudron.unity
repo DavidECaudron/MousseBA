@@ -909,6 +909,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 136409470}
+  - component: {fileID: 136409471}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -934,6 +935,22 @@ Transform:
   m_Father: {fileID: 2137831354}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &136409471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136409469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &152619358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,6 +1342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 253604386}
+  - component: {fileID: 253604387}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -1364,6 +1382,22 @@ Transform:
   m_Father: {fileID: 2137831354}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &253604387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253604385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &270449458
 GameObject:
   m_ObjectHideFlags: 0
@@ -5644,6 +5678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1233738360}
+  - component: {fileID: 1233738361}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -5667,6 +5702,22 @@ Transform:
   m_Father: {fileID: 2137831354}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1233738361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233738359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &1237253546
 GameObject:
   m_ObjectHideFlags: 0
