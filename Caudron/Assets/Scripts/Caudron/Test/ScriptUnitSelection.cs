@@ -25,15 +25,18 @@ public class ScriptUnitSelection : MonoBehaviour
     {
         DeselectAll();
         _unitSelectedList.Add(unitToAdd);
+        // unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
     }
     public void ShitClickSelect(GameObject unitToAdd)
     {
         if (!_unitSelectedList.Contains(unitToAdd))
         {
             _unitSelectedList.Add(unitToAdd);
+            // unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
         }
         else
         {
+            // unitToAdd.transform.GetChild(0).gameObject.SetActive(false);
             _unitSelectedList.Remove(unitToAdd);
         }
     }
@@ -43,6 +46,12 @@ public class ScriptUnitSelection : MonoBehaviour
     }
     public void DeselectAll()
     {
+        /*
+        foreach (var item in _unitSelectedList)
+        {
+            item.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        */
         _unitSelectedList.Clear();
     }
     public void Deselect(GameObject unitToRemove)

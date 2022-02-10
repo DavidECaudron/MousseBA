@@ -35,7 +35,7 @@ namespace CaudronTest
         private void Shoot()
         {
             if (_targetList.Count <= 0) return;
-             GameObject _instance = Instantiate(_missilePrefab, _shootingPoint.position, Quaternion.identity,_shootingPoint);
+            GameObject _instance = Instantiate(_missilePrefab, _shootingPoint.position, Quaternion.identity,_shootingPoint);
             _instance.GetComponent<ScriptMissileBehaviour>().SetTarget(_targetList[0].transform);
         }
 
