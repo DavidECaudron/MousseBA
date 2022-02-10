@@ -17,7 +17,7 @@ namespace CaudronTest
         {
             if (other != null)
             {
-                _targetList.Add(other.gameObject.transform.parent.gameObject.transform.parent.gameObject);
+                _targetList.Add(other.GetComponentInParent<ScriptMob>().gameObject);
             }
             if (!_repeatShootTest)
             {
@@ -29,13 +29,14 @@ namespace CaudronTest
         {
             if (other != null)
             {
-                _targetList.Remove(other.gameObject.transform.parent.gameObject.transform.parent.gameObject);
+                _targetList.Remove(other.GetComponentInParent<ScriptMob>().gameObject);
             }
             Debug.Log("exit");
         }
 
         private void Shoot()
         {
+            if (_targetList.Count <= 0) return;
              GameObject _instance = Instantiate(_missilePrefab, _shootingPoint.position, Quaternion.identity,_shootingPoint);
             _instance.GetComponent<ScriptMissileBehaviour>().SetTarget(_targetList[0].transform);
         }
