@@ -30,5 +30,10 @@ namespace CaudronTest
                 this.gameObject.transform.Translate(new Vector3(0, 1, 0), Space.World);
             }
         }
+
+        private void OnMouseDrag()
+        {
+            
+        }
     }
 }

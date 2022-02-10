@@ -23,7 +23,6 @@ namespace CaudronTest
             {
                 StartCoroutine(RepeatShoot(_targetList));
             }
-            Debug.Log("enter");
         }
         private void OnTriggerExit(Collider other)
         {
@@ -31,7 +30,6 @@ namespace CaudronTest
             {
                 _targetList.Remove(other.GetComponentInParent<ScriptMob>().gameObject);
             }
-            Debug.Log("exit");
         }
 
         private void Shoot()
