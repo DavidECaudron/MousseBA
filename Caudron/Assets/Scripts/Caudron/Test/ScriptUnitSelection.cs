@@ -42,7 +42,11 @@ public class ScriptUnitSelection : MonoBehaviour
     }
     public void DragSelect(GameObject unitToAdd)
     {
-
+        if (!_unitSelectedList.Contains(unitToAdd))
+        {
+            _unitSelectedList.Add(unitToAdd);
+            // unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
     public void DeselectAll()
     {
