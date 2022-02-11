@@ -15,7 +15,7 @@ namespace CaudronTest
 
         private void Update()
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(1))
             {
                 Ray _ray = _camera.ScreenPointToRay(Input.mousePosition);
                 RaycastHit _hit;
