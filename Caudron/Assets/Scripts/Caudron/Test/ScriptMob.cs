@@ -10,7 +10,7 @@ namespace CaudronTest
 
         private void Start()
         {
-            ScriptUnitSelection.Instance._unitList.Add(this.gameObject);
+            //ScriptUnitSelection.Instance._unitList.Add(this.gameObject);
         }
 
         private void Update()

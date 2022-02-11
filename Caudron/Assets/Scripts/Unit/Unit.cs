@@ -5,7 +5,7 @@ using UnityEngine.AI;
 public class Unit : MonoBehaviour, IUnit
 {
     private UnitData _unitData;
-    [SerializeField] private GameObject _graphic;
+    [SerializeField] private GameObject _graphic;    
 
     private NavMeshAgent _agent;
 
@@ -24,7 +24,7 @@ public class Unit : MonoBehaviour, IUnit
         _agent.SetDestination(position);
     }
 
-    private void InitializeUnit(UnitData data)
+    public void InitializeUnit(UnitData data)
     {
         _unitData = data;
         if (data?.Graphic == null)
