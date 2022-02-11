@@ -1,6 +1,6 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace CaudronTest
@@ -10,44 +10,78 @@ namespace CaudronTest
         [SerializeField] private Transform _shootingPoint;
         [SerializeField] private GameObject _missilePrefab;
 
-        private List<GameObject> _targetList = new List<GameObject>();
-        private bool _repeatShootTest = false;
+        private List<Unit> _targetList = new List<Unit>();
+        private bool _repeatShootRoutineCheck = false;
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other != null)
+            Unit unitInRange = other.GetComponentInParent<Unit>();
+            if (unitInRange == null) return;
+
+            _targetList.Add(unitInRange);
+
+            if (!_repeatShootRoutineCheck)
             {
-                _targetList.Add(other.GetComponentInParent<Unit>().gameObject);
-            }
-            if (!_repeatShootTest)
-            {
-                StartCoroutine(RepeatShoot(_targetList));
+                StartCoroutine(RepeatShoot());
             }
         }
         private void OnTriggerExit(Collider other)
         {
-            if (other != null)
+            Unit unitInRange = other.GetComponentInParent<Unit>();
+            if (unitInRange == null) return;
+
+            _targetList.Remove(unitInRange);
+        }
+
+        private void Shoot(Transform target)
+        {
+            GameObject _instance = Instantiate(_missilePrefab, _shootingPoint.position, Quaternion.identity, _shootingPoint);
+            _instance.GetComponent<ScriptMissileBehaviour>().SetTarget(target);
+        }
+
+        private Unit GetTarget()
+        {
+            CheckTargetList();
+
+            foreach (Unit unit in _targetList)
             {
-                _targetList.Remove(other.GetComponentInParent<Unit>().gameObject);
+                if (unit.IsALive)
+                {
+                    return unit;
+                }
             }
+
+            return null;
         }
 
-        private void Shoot()
+        private void CheckTargetList()
         {
-            if (_targetList.Count <= 0) return;
-            GameObject _instance = Instantiate(_missilePrefab, _shootingPoint.position, Quaternion.identity,_shootingPoint);
-            _instance.GetComponent<ScriptMissileBehaviour>().SetTarget(_targetList[0].transform);
+            _targetList = _targetList.Where(x => x.IsALive).ToList();
         }
 
-        private IEnumerator RepeatShoot(List<GameObject> _targetlist)
+
+        private IEnumerator RepeatShoot()
         {
-            _repeatShootTest = true;
+            _repeatShootRoutineCheck = true;
             while (_targetList.Count > 0)
             {
                 yield return new WaitForSeconds(1.0f);
-                Shoot();
+
+                Unit target = GetTarget();
+                if (target != null)
+                {
+                    Shoot(target.transform);
+                }
             }
-            _repeatShootTest = false;
+            _repeatShootRoutineCheck = false;
         }
+
+        private void OnDrawGizmos()
+        {
+            if (_targetList.Count <= 0) return;
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(_shootingPoint.transform.position, _targetList[0].transform.position);
+        }
+
     }
 }

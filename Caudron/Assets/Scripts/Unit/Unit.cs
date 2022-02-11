@@ -9,6 +9,12 @@ public class Unit : MonoBehaviour, IUnit
 
     private NavMeshAgent _agent;
 
+    public int CurrentHP;
+    public bool IsALive
+    {
+        get { return CurrentHP > 0; }
+    }
+
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
@@ -32,13 +38,15 @@ public class Unit : MonoBehaviour, IUnit
             Debug.LogError("No graphics set in UnitData for this Unit");
             Destroy(gameObject);
         }
+
         Instantiate(_unitData.Graphic, transform.position, Quaternion.identity, _graphic.transform);
 
-        ScriptUnitSelection.Instance._unitList.Add(this.gameObject);
+        ScriptUnitSelection.Instance.UnitList.Add(this.gameObject);
+        CurrentHP = data.HP;
     }
 
     private void OnDestroy()
     {
-        ScriptUnitSelection.Instance._unitList.Remove(this.gameObject);
+        ScriptUnitSelection.Instance.UnitList.Remove(this.gameObject);
     }
 }

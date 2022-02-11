@@ -1,4 +1,3 @@
-using CaudronTest;
 using UnityEngine;
 
 public class ScriptMissileBehaviour : MonoBehaviour
@@ -14,13 +13,21 @@ public class ScriptMissileBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.GetComponentInParent<Unit>().gameObject);
+        Debug.Log("Hit");
+
+        other.GetComponentInParent<Unit>().CurrentHP -= 25;
+        Destroy(gameObject);
     }
 
     private void FollowTarget()
     {
-        this.transform.LookAt(_target);
-        this.transform.Translate(new Vector3(_target.position.x, _target.position.y - this.transform.position.y, _target.position.z) * Time.deltaTime);
+        Vector3 movement = _target.position - transform.position;
+
+
+
+
+
+        transform.Translate(movement * Time.deltaTime);
     }
 
     public void SetTarget(Transform _target)

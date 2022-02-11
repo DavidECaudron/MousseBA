@@ -17,9 +17,9 @@ public class InputManager : MonoBehaviour
             RaycastHit _hit;
             Ray _ray = _camera.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(_ray, out _hit, Mathf.Infinity);
-            for (int i = 0; i < ScriptUnitSelection.Instance._unitSelectedList.Count; i++)
+            for (int i = 0; i < ScriptUnitSelection.Instance.UnitSelectedList.Count; i++)
             {
-                GameObject item = ScriptUnitSelection.Instance._unitSelectedList[i];
+                GameObject item = ScriptUnitSelection.Instance.UnitSelectedList[i];
                 item.GetComponentInChildren<Unit>().Move(_hit.point);
             }
         }

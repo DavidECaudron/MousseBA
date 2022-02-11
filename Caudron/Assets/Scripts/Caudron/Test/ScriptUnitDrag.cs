@@ -85,7 +85,7 @@ public class ScriptUnitDrag : MonoBehaviour
     private void SelectUnits()
     {
         // loop through units
-        foreach (var item in ScriptUnitSelection.Instance._unitList)
+        foreach (var item in ScriptUnitSelection.Instance.UnitList)
         {
             if (_selectionBox.Contains(_camera.WorldToScreenPoint(item.transform.position)))
             {

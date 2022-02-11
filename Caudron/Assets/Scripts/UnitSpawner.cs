@@ -4,8 +4,14 @@ public class UnitSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _unitPrefab;
     [SerializeField] private GameObject _unitParent;
+    [SerializeField] private Transform _spawnPoint;
 
     public UnitData test;
+
+    private void Start()
+    {
+        _unitParent.transform.position = _spawnPoint.transform.position;
+    }
 
     private void Update()
     {
@@ -40,7 +46,7 @@ public class UnitSpawner : MonoBehaviour
 
     private void InstantiateUnit(UnitData unitData)
     {
-        GameObject unitInstance = Instantiate(_unitPrefab, _unitParent.transform.position, Quaternion.identity, _unitParent.transform);
+        GameObject unitInstance = Instantiate(_unitPrefab, _spawnPoint.transform.position, Quaternion.identity, _unitParent.transform);
         unitInstance.GetComponent<Unit>().InitializeUnit(unitData);
     }
 

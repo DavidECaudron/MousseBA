@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _unitPrefab: {fileID: 5606599237852203775, guid: 831455e0286f9454d968abd9560095c9, type: 3}
   _unitParent: {fileID: 0}
+  _spawnPoint: {fileID: 7262664593092962120}
   test: {fileID: 11400000, guid: 1d7c922316bacaf488e82b69a8ac294b, type: 2}
 --- !u!1 &7262664593092962121
 GameObject:

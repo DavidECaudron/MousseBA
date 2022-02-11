@@ -3,48 +3,46 @@ using UnityEngine;
 
 public class ScriptUnitSelection : MonoBehaviour
 {
-    public List<GameObject> _unitList = new List<GameObject>();
-    public List<GameObject> _unitSelectedList = new List<GameObject>();
+    public List<GameObject> UnitList = new List<GameObject>();
+    public List<GameObject> UnitSelectedList = new List<GameObject>();
 
-    private static ScriptUnitSelection _instance;
-    public static ScriptUnitSelection Instance { get { return _instance; } }
+    public static ScriptUnitSelection Instance;
 
     private void Awake()
     {
-        if (_instance != null && _instance != this)
+        if (Instance != null)
         {
             Destroy(this.gameObject);
+            return;
         }
-        else
-        {
-            _instance = this;
-        }
+
+        Instance = this;
     }
 
     public void ClickSelect(GameObject unitToAdd)
     {
         DeselectAll();
-        _unitSelectedList.Add(unitToAdd);
+        UnitSelectedList.Add(unitToAdd);
         // unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
     }
     public void ShitClickSelect(GameObject unitToAdd)
     {
-        if (!_unitSelectedList.Contains(unitToAdd))
+        if (!UnitSelectedList.Contains(unitToAdd))
         {
-            _unitSelectedList.Add(unitToAdd);
+            UnitSelectedList.Add(unitToAdd);
             // unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
         }
         else
         {
             // unitToAdd.transform.GetChild(0).gameObject.SetActive(false);
-            _unitSelectedList.Remove(unitToAdd);
+            UnitSelectedList.Remove(unitToAdd);
         }
     }
     public void DragSelect(GameObject unitToAdd)
     {
-        if (!_unitSelectedList.Contains(unitToAdd))
+        if (!UnitSelectedList.Contains(unitToAdd))
         {
-            _unitSelectedList.Add(unitToAdd);
+            UnitSelectedList.Add(unitToAdd);
             // unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
         }
     }
@@ -56,7 +54,7 @@ public class ScriptUnitSelection : MonoBehaviour
             item.transform.GetChild(0).gameObject.SetActive(false);
         }
         */
-        _unitSelectedList.Clear();
+        UnitSelectedList.Clear();
     }
     public void Deselect(GameObject unitToRemove)
     {
