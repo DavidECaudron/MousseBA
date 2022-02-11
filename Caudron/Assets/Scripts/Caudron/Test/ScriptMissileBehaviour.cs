@@ -14,7 +14,7 @@ public class ScriptMissileBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.GetComponentInParent<ScriptMob>().gameObject);
+        Destroy(other.GetComponentInParent<Unit>().gameObject);
     }
 
     private void FollowTarget()

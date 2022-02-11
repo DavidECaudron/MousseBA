@@ -33,5 +33,12 @@ public class Unit : MonoBehaviour, IUnit
             Destroy(gameObject);
         }
         Instantiate(_unitData.Graphic, transform.position, Quaternion.identity, _graphic.transform);
+
+        ScriptUnitSelection.Instance._unitList.Add(this.gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        ScriptUnitSelection.Instance._unitList.Remove(this.gameObject);
     }
 }

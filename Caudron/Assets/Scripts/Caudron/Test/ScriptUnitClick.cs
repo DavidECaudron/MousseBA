@@ -18,11 +18,11 @@ public class ScriptUnitClick : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
-                    ScriptUnitSelection.Instance.ShitClickSelect(_hit.collider.GetComponentInParent<ScriptMob>().gameObject);
+                    ScriptUnitSelection.Instance.ShitClickSelect(_hit.collider.GetComponentInParent<Unit>().gameObject);
                 }
                 else
                 {
-                    ScriptUnitSelection.Instance.ClickSelect(_hit.collider.GetComponentInParent<ScriptMob>().gameObject);
+                    ScriptUnitSelection.Instance.ClickSelect(_hit.collider.GetComponentInParent<Unit>().gameObject);
                 }
             }
             else

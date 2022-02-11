@@ -17,7 +17,7 @@ namespace CaudronTest
         {
             if (other != null)
             {
-                _targetList.Add(other.GetComponentInParent<ScriptMob>().gameObject);
+                _targetList.Add(other.GetComponentInParent<Unit>().gameObject);
             }
             if (!_repeatShootTest)
             {
@@ -28,7 +28,7 @@ namespace CaudronTest
         {
             if (other != null)
             {
-                _targetList.Remove(other.GetComponentInParent<ScriptMob>().gameObject);
+                _targetList.Remove(other.GetComponentInParent<Unit>().gameObject);
             }
         }
 
